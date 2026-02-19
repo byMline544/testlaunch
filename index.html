@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minecraft 1.5.2 Launcher</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="launcher">
+    <h1>Minecraft Launcher 1.5.2</h1>
+    <p class="subtitle">Выгрузка версии 1.5.2 + запуск игры</p>
+
+    <section class="panel">
+      <label for="nickname">Никнейм</label>
+      <input id="nickname" type="text" maxlength="16" placeholder="Введите ник" value="Player152" />
+
+      <label for="clientPath">Путь к папке клиента Minecraft</label>
+      <input id="clientPath" type="text" placeholder="Например: C:\\Games\\Minecraft152" />
+
+      <label for="javaPath">Путь к Java (необязательно)</label>
+      <input id="javaPath" type="text" placeholder="Например: C:\\Program Files\\Java\\bin\\javaw.exe" />
+
+      <label for="ram">Выделяемая RAM</label>
+      <select id="ram">
+        <option value="1024">1024 MB</option>
+        <option value="2048" selected>2048 MB</option>
+        <option value="4096">4096 MB</option>
+      </select>
+
+      <label class="check">
+        <input id="fullscreen" type="checkbox" />
+        Запускать в полноэкранном режиме
+      </label>
+    </section>
+
+    <div class="actions">
+      <button id="downloadBtn" class="secondary">Выгрузить 1.5.2</button>
+      <button id="launchBtn" class="launch">Запустить 1.5.2</button>
+    </div>
+
+    <pre id="status" class="status">Сервер не запущен. Запуск: npm install && npm start</pre>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
