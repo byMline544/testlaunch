@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minecraft 1.5.2 Launcher</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="launcher">
+    <h1>Minecraft Launcher</h1>
+    <p class="subtitle">Базовая версия для запуска Minecraft 1.5.2</p>
+
+    <section class="panel">
+      <label for="nickname">Никнейм</label>
+      <input id="nickname" type="text" maxlength="16" placeholder="Введите ник" value="Player152" />
+
+      <label for="version">Версия</label>
+      <select id="version">
+        <option value="1.5.2" selected>1.5.2 (рекомендуется)</option>
+        <option value="1.7.10">1.7.10</option>
+        <option value="1.12.2">1.12.2</option>
+      </select>
+
+      <label for="clientPath">Путь к клиенту Minecraft</label>
+      <div class="path-row">
+        <input id="clientPath" type="text" placeholder="Например: C:\\Games\\Minecraft" />
+        <button id="browseBtn" type="button">Выбрать</button>
+      </div>
+      <input id="dirPicker" type="file" webkitdirectory directory hidden />
+    </section>
+
+    <section class="panel">
+      <h2>Настройки запуска</h2>
+
+      <label for="javaPath">Путь к Java</label>
+      <input id="javaPath" type="text" placeholder="Например: C:\\Program Files\\Java\\bin\\javaw.exe" />
+
+      <label for="ram">Выделяемая RAM</label>
+      <select id="ram">
+        <option value="1024">1024 MB</option>
+        <option value="2048" selected>2048 MB</option>
+        <option value="4096">4096 MB</option>
+      </select>
+
+      <label class="check">
+        <input id="fullscreen" type="checkbox" />
+        Запускать в полноэкранном режиме
+      </label>
+    </section>
+
+    <button id="launchBtn" class="launch">Запустить игру</button>
+
+    <pre id="status" class="status">Ожидание запуска...</pre>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
