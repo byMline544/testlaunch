@@ -1,0 +1,14 @@
+{
+  "name": "minecraft-152-launcher",
+  "version": "1.0.0",
+  "description": "Базовый лаунчер Minecraft 1.5.2 с загрузкой и запуском",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check script.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "minecraft-launcher-core": "^3.18.0"
+  }
+}

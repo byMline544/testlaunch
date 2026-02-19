@@ -1,10 +1,11 @@
 :root {
-  --bg: #11141a;
   --panel: #1b2130;
   --text: #e9eefc;
   --muted: #98a2bf;
   --accent: #4c8bf5;
   --accent-hover: #3f76d3;
+  --secondary: #2f415f;
+  --secondary-hover: #3b547d;
   --border: #2a3349;
 }
 
@@ -23,21 +24,19 @@ body {
 }
 
 .launcher {
-  width: min(720px, 92vw);
+  width: min(700px, 92vw);
   background: rgba(17, 20, 26, 0.95);
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 22px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
 }
 
-h1,
-h2 {
+h1 {
   margin: 0 0 8px;
 }
 
 .subtitle {
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   color: var(--muted);
 }
 
@@ -46,7 +45,6 @@ h2 {
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 14px;
-  margin-bottom: 14px;
 }
 
 label {
@@ -71,28 +69,6 @@ select {
   color: var(--text);
 }
 
-.path-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 8px;
-}
-
-button {
-  border: 0;
-  border-radius: 8px;
-  padding: 9px 13px;
-  cursor: pointer;
-}
-
-#browseBtn {
-  background: #273552;
-  color: #dce7ff;
-}
-
-#browseBtn:hover {
-  background: #304266;
-}
-
 .check {
   margin-top: 12px;
   display: flex;
@@ -100,9 +76,30 @@ button {
   align-items: center;
 }
 
+.actions {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.secondary {
+  background: var(--secondary);
+  color: #e5edff;
+}
+
+.secondary:hover {
+  background: var(--secondary-hover);
+}
+
 .launch {
-  width: 100%;
-  margin-top: 4px;
   background: var(--accent);
   color: white;
   font-weight: 600;

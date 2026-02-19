@@ -8,32 +8,17 @@
 </head>
 <body>
   <main class="launcher">
-    <h1>Minecraft Launcher</h1>
-    <p class="subtitle">Базовая версия для запуска Minecraft 1.5.2</p>
+    <h1>Minecraft Launcher 1.5.2</h1>
+    <p class="subtitle">Выгрузка версии 1.5.2 + запуск игры</p>
 
     <section class="panel">
       <label for="nickname">Никнейм</label>
       <input id="nickname" type="text" maxlength="16" placeholder="Введите ник" value="Player152" />
 
-      <label for="version">Версия</label>
-      <select id="version">
-        <option value="1.5.2" selected>1.5.2 (рекомендуется)</option>
-        <option value="1.7.10">1.7.10</option>
-        <option value="1.12.2">1.12.2</option>
-      </select>
+      <label for="clientPath">Путь к папке клиента Minecraft</label>
+      <input id="clientPath" type="text" placeholder="Например: C:\\Games\\Minecraft152" />
 
-      <label for="clientPath">Путь к клиенту Minecraft</label>
-      <div class="path-row">
-        <input id="clientPath" type="text" placeholder="Например: C:\\Games\\Minecraft" />
-        <button id="browseBtn" type="button">Выбрать</button>
-      </div>
-      <input id="dirPicker" type="file" webkitdirectory directory hidden />
-    </section>
-
-    <section class="panel">
-      <h2>Настройки запуска</h2>
-
-      <label for="javaPath">Путь к Java</label>
+      <label for="javaPath">Путь к Java (необязательно)</label>
       <input id="javaPath" type="text" placeholder="Например: C:\\Program Files\\Java\\bin\\javaw.exe" />
 
       <label for="ram">Выделяемая RAM</label>
@@ -49,9 +34,12 @@
       </label>
     </section>
 
-    <button id="launchBtn" class="launch">Запустить игру</button>
+    <div class="actions">
+      <button id="downloadBtn" class="secondary">Выгрузить 1.5.2</button>
+      <button id="launchBtn" class="launch">Запустить 1.5.2</button>
+    </div>
 
-    <pre id="status" class="status">Ожидание запуска...</pre>
+    <pre id="status" class="status">Сервер не запущен. Запуск: npm install && npm start</pre>
   </main>
 
   <script src="script.js"></script>
